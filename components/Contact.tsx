@@ -35,10 +35,10 @@ export default function Contact() {
   });
 
   return (
-    <section id="contact" className="relative py-32 section-surface overflow-hidden">
+    <section id="contact" className="relative py-32 bg-white overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-violet-200 to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-violet-200 to-transparent" />
-      <div className="absolute top-1/3 left-0 w-80 h-80 bg-violet-50 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-violet-50 rounded-full blur-3xl pointer-events-none opacity-60" />
 
       <div className="max-w-7xl mx-auto px-8 lg:px-12" ref={ref}>
         {/* Header */}
@@ -66,7 +66,7 @@ export default function Contact() {
             variants={fade(0.15)} initial="hidden" animate={inView ? 'visible' : 'hidden'}
             className="lg:col-span-2 flex flex-col gap-5"
           >
-            <div className="card rounded-2xl p-8 bg-white">
+            <div className="rounded-2xl p-8 bg-white border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.06),0_12px_32px_rgba(0,0,0,0.08)]">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Ready to collaborate?</h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-8">
                 Whether it&apos;s a new product, a redesign, a 3D visualization, or a full brand
@@ -108,7 +108,7 @@ export default function Contact() {
             variants={fade(0.25)} initial="hidden" animate={inView ? 'visible' : 'hidden'}
             className="lg:col-span-3"
           >
-            <form onSubmit={handleSubmit} className="card rounded-2xl p-8 bg-white space-y-5">
+            <form onSubmit={handleSubmit} className="rounded-2xl p-8 bg-white border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.06),0_12px_32px_rgba(0,0,0,0.08)] space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {[
                   { id: 'name', label: 'Name', type: 'text', placeholder: 'Your name', key: 'name' as const },
